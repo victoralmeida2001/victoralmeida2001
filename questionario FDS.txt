@@ -1,0 +1,42 @@
+#Questionário de Revisão
+
+1 - Qual é a finalidade do comando git init? Quando ele deve ser utilizado?
+
+2 - O que o comando git add faz? Qual é a diferença entre git add . e git add <nome_do_arquivo>?
+
+3 - Explique a importância do commit. Como o comando git commit -m "mensagem" é utilizado?
+
+4 - Qual a diferença entre git commit e git push?
+
+5 - Quando devemos usar o comando git clone e qual é a sua função?
+
+6 - O que é um repositório remoto e qual a sua utilidade?
+
+7 - Qual é o comando para visualizar o estado atual do repositório e o que ele mostra?
+
+8 - Qual comando deve ser utilizado para mudar de uma branch para outra?
+
+9 - Explique o que é um branch e qual é a sua utilidade em um projeto colaborativo.
+
+10 - O que acontece se você tentar enviar (git push) um commit sem configurar um repositório remoto?
+
+11 - Como podemos desfazer um git add antes de fazer o commit?
+
+12 - Qual comando permite visualizar o histórico de commits? O que cada linha do histórico representa?*
+
+13 - Explique o que é a área de preparação (staging area) e sua importância no fluxo de trabalho do Git.
+
+14 - Como você pode renomear uma branch existente usando Git?
+
+15 - O que é o HEAD no contexto do Git e qual é a sua função?
+
+16 - Como você pode listar todas as branches de um repositório? Qual branch está atualmente em uso?
+
+
+17 - O que é um conflito de merge e como ele pode ser resolvido?
+
+18 - Qual é a finalidade do comando git pull e como ele difere de git fetch?
+
+19 - Como você pode excluir um arquivo do repositório Git e garantir que ele seja removido do histórico?*
+
+20 - Explique a diferença entre git reset e git revert e quando utilizar cada um.*
