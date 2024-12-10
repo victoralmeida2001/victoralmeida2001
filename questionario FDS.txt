@@ -108,4 +108,11 @@
     git reset altera o histórico de commits, enquanto o git revert cria
     um novo commit para desfazer as alterações.
     # git reset: O git reset pode ser usado para desfazer alterações em um branch privado.
+                 Desfaz commits no repositório local, movendo o ponteiro do branch para 
+                 um commit anterior. Isso altera o histórico de commits, podendo causar 
+                 a perda permanente de alterações. Por isso, deve ser usado com cuidado 
+                 e não em branches compartilhadas.
     # git revert: O git revert pode ser usado para desfazer alterações em um branch público.
+                  Desfaz alterações confirmadas no repositório, criando um novo commit que 
+                  desfaz as alterações feitas pelo commit específico. 
+                  Pode ser usado em branches compartilhadas.
