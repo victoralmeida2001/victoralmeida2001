@@ -8,3 +8,5 @@ em aprendizado
 está indo tudo bem até o momento
 
 mais uma vez para garantir
+
+teste após clonagem

@@ -1,0 +1,118 @@
+#Questionário de Revisão
+
+1 - Qual é a finalidade do comando git init? Quando ele deve ser utilizado?
+    R1 - Criar um repositório local; deve ser criado quando não houver repositório para desenvolvimento de projeto
+
+2 - O que o comando git add faz? Qual é a diferença entre git add . e git add <nome_do_arquivo>?
+    R2 - Esse comando encaminha alterações realizadas no projeto para área de preparação
+         Se utilizado o ponto após espaço -> Todos os arquivos alterados migram para a área de preparação
+         se utilizada a descrição de um arquivo apenas ele será migrado
+
+3 - Explique a importância do commit. Como o comando git commit -m "mensagem" é utilizado?
+    R3 - Funciona como uma fragmentação temporal das etapas do projeto, possilitanto controle.
+    ao utilizar o -m após esse comando será atrelada uma mensagem com descrição referente à etapa,
+    possibilitando rastreabilidade e controle do processo
+
+4 - Qual a diferença entre git commit e git push?
+    R4 - o commit direciona as alterações para o repositório local, enquanto
+    o push direciona, após o commit, para o diretório remoto
+
+5 - Quando devemos usar o comando git clone e qual é a sua função?
+    R5 - Deve ser utilizado quando já houver um projeto em andamento em um repositório
+    remoto e almeja-se tê-lo no repositório local; criar cópia parcial (um branch)
+    ou cópia total (todos branchs) do projeto 
+
+6 - O que é um repositório remoto e qual a sua utilidade?
+    R6 - Local para armazenamento na nuvem de arquivos e projetos, objetiva-se
+    trabalho simutâneo e ordeiro dos projetos
+
+7 - Qual é o comando para visualizar o estado atual do repositório e o que ele mostra?
+    R7 - git status ; Isso inclui:
+    1 - Quais alterações estão na staging area (e serão inclusas no próximo commit), 
+    2 - Quais arquivos tem modificações no diretório atual, mas fora da staging area e 
+    3 - Quais são os "desconhecidos" presentes no diretório, mas ignorados pelo git.
+
+8 - Qual comando deve ser utilizado para mudar de uma branch para outra?
+    R8 - git checkout
+
+9 - Explique o que é um branch e qual é a sua utilidade em um projeto colaborativo.
+    R9 - São linhas temporais/de etapas no repositório atual; em colaboração podem-se
+    criar ramificações de uma branch principal com finalidade comum
+
+10 - O que acontece se você tentar enviar (git push) um commit sem configurar um repositório remoto?
+    R10 - o comando não funcionará, pois o repositório local precisa estar conectado a 
+    um repositório remoto do GIT
+
+11 - Como podemos desfazer um git add antes de fazer o commit?
+    R11 - pode usar o comando git reset <arquivo> ou git reset para
+          remover todas as alterações do stage.
+
+12 - Qual comando permite visualizar o histórico de commits? O que cada linha do histórico representa?
+    R12 - git log; cada linha do commit representa em ordem 1 - o seu checksum SHA-1, 
+    2 - o nome e email do autor, 3 - data de inserção, e a 4 - mensagem do commit.
+
+13 - Explique o que é a área de preparação (staging area) e sua importância no fluxo de trabalho do Git.
+    R13 - No Git, a staging area é um espaço temporário onde os arquivos modificados são preparados
+          para serem incluídos no próximo commit. A staging area permite que os desenvolvedores selecionem 
+          quais alterações incluir em um commit, separando-as em etapas.
+
+14 - Como você pode renomear uma branch existente usando Git?
+    R14 - 1 - Realizar checkout no branch em questão # garantindo o branch que será alterado
+          2 - git branch -m nome novo #após o -m incluir nome novo
+          3 - git branch --all #Verificar todas as branchs existentes
+
+15 - O que é o HEAD no contexto do Git e qual é a sua função?
+    R15 - Referência de etapa /indicação do estado atual de um repositório (o ponto atual 
+    de um repositório) no git. Por exemplo: 1 - Estado normal -> Aponta para um nome de 
+    branch, sendo sinônimo de “o último commit no branch atual”
+    2 - Estado desanexado -> Aponta diretamente para um commit em vez de um branch
+
+16 - Como você pode listar todas as branches de um repositório? Qual branch está atualmente em uso?
+    R16 - git branch --all; o branch que estiver sinalizando em verde será o que está em uso
+
+17 - O que é um conflito de merge e como ele pode ser resolvido?
+    R17 -  Acontecem quando várias pessoas tentam mudar o 
+    mesmo arquivo ao mesmo tempo e suas alterações entram em conflito.
+    Etapas:
+    1. Verifique o status do seu repositório:
+    Antes de iniciar um merge, verifique se há alterações não commitadas no seu repositório. Para fazer isso, execute o seguinte comando: 
+    git status
+    Se houver alterações não commitadas, commit-as antes de iniciar o merge.
+    2. Faça o merge
+    Para fazer o merge de uma branch em outra, execute o seguinte comando:
+    git merge <nome_da_branch>
+    O Git tentará unir as duas branches automaticamente. Se houver conflitos, o Git exibirá uma mensagem informando que ocorreram conflitos e o merge foi interrompido.
+    3. Resolva os conflitos
+    Para resolver os conflitos, abra o arquivo com conflito e procure pelos trechos de código que geraram conflito. Os trechos conflitantes serão demarcados com "<<<<<<<", "=======" e ">>>>>>>". Edite o arquivo para manter apenas as partes que você deseja manter e remova as outras. Quando terminar, salve o arquivo.
+    4. Adicione as alterações e commit-as
+    Depois de resolver os conflitos, adicione as alterações ao stage e commit-as. Para fazer isso, execute o seguinte comando:
+    git add <nome_do_arquivo>
+    git commit
+    5. Conclua o merge
+    Após resolver os conflitos e commitar as alterações, o merge pode ser concluído. Para fazer isso, execute o seguinte comando:
+    git merge --continue
+    6. Verifique o histórico do Git
+    Para verificar o histórico do Git e confirmar que o merge foi concluído com sucesso, execute o seguinte comando:
+    git log
+
+18 - Qual é a finalidade do comando git pull e como ele difere de git fetch?
+    R18 - o fetch e o pull baixam o histórico de um marcador, porém o pull a
+    além disso incorpora as mudanças
+
+19 - Como você pode excluir um arquivo do repositório Git e garantir que ele seja removido do histórico?*
+    R19 - git filter-repo
+
+
+20 - Explique a diferença entre git reset e git revert e quando utilizar cada um.*
+    R20 - A principal diferença entre o git reset e o git revert é que o 
+    git reset altera o histórico de commits, enquanto o git revert cria
+    um novo commit para desfazer as alterações.
+    # git reset: O git reset pode ser usado para desfazer alterações em um branch privado.
+                 Desfaz commits no repositório local, movendo o ponteiro do branch para 
+                 um commit anterior. Isso altera o histórico de commits, podendo causar 
+                 a perda permanente de alterações. Por isso, deve ser usado com cuidado 
+                 e não em branches compartilhadas.
+    # git revert: O git revert pode ser usado para desfazer alterações em um branch público.
+                  Desfaz alterações confirmadas no repositório, criando um novo commit que 
+                  desfaz as alterações feitas pelo commit específico. 
+                  Pode ser usado em branches compartilhadas.
