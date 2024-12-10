@@ -1,0 +1,18 @@
+# Processo para atualizar repositório remoto em conformidade com repositório local
+
+1 - Após realizar atualização
+2 - Salvar (ctrl + s)
+3 - git add ". (ponto)" (todos os arquivos) ou ... (especificar arquivo nomeando após comando)
+4 - git commit -m "aqui deve-se descrever a etapa commitada"
+5 - git push -u origin "descrever linha do tempo aumejada"
+
+------------
+
+# Processo para clonagem de repositório remoto (git hub)
+
+1 - Criar pasta para alocar em repositório local
+2 - Abrir pasta no VScode
+3 - No terminal - digitar: git clone + (copia do link da https que consta no botão "code")
+    3.1 - após o https + espaça + ponto -> cópia todas as branchs (linhas do tempo)
+    3.2 - após o https + espaça + descrição exata da branch que almeja-se copiar
+4 - Executar 
