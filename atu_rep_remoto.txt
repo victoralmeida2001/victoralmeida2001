@@ -16,3 +16,9 @@
     3.1 - após o https + espaça + ponto -> cópia todas as branchs (linhas do tempo)
     3.2 - após o https + espaça + descrição exata da branch que almeja-se copiar
 4 - Executar 
+
+# Alteração de repositório local a partir de alterações no repositório remoto:
+
+1 - Arquivo alterado
+2 - Abrir VScode
+3 - No terminal digitar: git pull origin "descrição da linha do tempo"
